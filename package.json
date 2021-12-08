@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build-library": "node build/build-library.js",
+    "build-library": "node build/build-library.js && mv dist/* ./../../public/assets/plugins/vue-treeselect/",
     "build-docs": "rimraf gh-pages && mkdir gh-pages && node build/build-docs.js",
     "preview-docs": "http-server gh-pages",
     "gh-pages": "npm run build-docs && gh-pages --dist gh-pages --branch gh-pages --dotfiles",

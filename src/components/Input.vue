@@ -67,13 +67,14 @@
 
       focus() {
         const { instance } = this
-
-        if (!instance.disabled) {
-          this.$refs.input && this.$refs.input.focus()
-        }
+        console.log('focus', instance)
+        // if (!instance.disabled) {
+        //   this.$refs.input && this.$refs.input.focus()
+        // }
       },
 
       blur() {
+        console.log('blur')
         this.$refs.input && this.$refs.input.blur()
       },
 
@@ -210,7 +211,6 @@
           evt.stopPropagation()
         }
       },
-
       renderInputContainer() {
         const { instance } = this
         const props = {}
