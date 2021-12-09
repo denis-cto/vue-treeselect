@@ -1435,7 +1435,7 @@ export default {
     },
 
     resetSearchQuery() {
-      this.trigger.searchQuery = ''
+     // this.trigger.searchQuery = ''
     },
 
     closeMenu() {
