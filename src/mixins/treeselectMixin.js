@@ -632,10 +632,10 @@ export default {
     /**
      * z-index of the menu.
      */
-    zIndex: {
-      type: [ Number, String ],
-      default: 999,
-    },
+    // zIndex: {
+    //   type: [ Number, String ],
+    //   default: 999,
+    // },
   },
 
   data() {
@@ -1173,14 +1173,15 @@ export default {
       if (isClickedOnValueContainer && !this.menu.isOpen && (this.openOnClick || this.trigger.isFocused)) {
         this.openMenu()
       }
-
+      console.log('this._blurOnSelect', this._blurOnSelect);
+     // this._blurOnSelect = true
       if (this._blurOnSelect) {
         this.blurInput()
       } else {
         // Focus the input or prevent blurring.
         this.focusInput()
       }
-
+    //  this._blurOnSelect = false
       this.resetFlags()
     }),
 
@@ -1777,7 +1778,7 @@ export default {
       }
 
       if (this.localSearch.active && nextState && (this.single || this.clearOnSelect)) {
-        this.resetSearchQuery()
+        //this.resetSearchQuery()
       }
 
       if (this.single && this.closeOnSelect) {
