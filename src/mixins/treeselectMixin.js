@@ -1173,15 +1173,15 @@ export default {
       if (isClickedOnValueContainer && !this.menu.isOpen && (this.openOnClick || this.trigger.isFocused)) {
         this.openMenu()
       }
-      console.log('this._blurOnSelect', this._blurOnSelect);
-     // this._blurOnSelect = true
+      // console.log('this._blurOnSelect', this._blurOnSelect)
+      // this._blurOnSelect = true
       if (this._blurOnSelect) {
         this.blurInput()
       } else {
         // Focus the input or prevent blurring.
         this.focusInput()
       }
-    //  this._blurOnSelect = false
+      //  this._blurOnSelect = false
       this.resetFlags()
     }),
 
